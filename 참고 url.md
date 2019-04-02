@@ -15,3 +15,12 @@
 
 
 
+## test sample
+
+[Spring Controller Test](http://zetcode.com/spring/mockmvc/)  
+
+검색 키워드: mockmvc mockito  
+[MockMVC, JUnit, Mockito](https://memorynotfound.com/unit-test-spring-mvc-rest-service-junit-mockito/)  
+
+
+
