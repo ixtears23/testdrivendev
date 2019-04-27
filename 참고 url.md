@@ -3,6 +3,9 @@
 - [Spring MVC Controller Unit Test](https://github.com/spring-guides/gs-testing-web.git)
 - [JUnit5 Guide-baeldung](https://www.baeldung.com/junit-5)  
 - [spring boot test](https://spring.io/guides/gs/testing-web/)  
+- [Unit and Integration Tests in Spring Boot](https://dzone.com/articles/unit-and-integration-tests-in-spring-boot-2)  
+
+
 
 # pront-end
 
@@ -22,6 +25,5 @@
 
 검색 키워드: mockmvc mockito  
 [MockMVC, JUnit, Mockito](https://memorynotfound.com/unit-test-spring-mvc-rest-service-junit-mockito/)  
-
 
 
