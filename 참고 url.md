@@ -4,6 +4,7 @@
 - [JUnit5 Guide-baeldung](https://www.baeldung.com/junit-5)  
 - [spring boot test](https://spring.io/guides/gs/testing-web/)  
 - [Unit and Integration Tests in Spring Boot](https://dzone.com/articles/unit-and-integration-tests-in-spring-boot-2)  
+- [DB test always rollbak and ignore](https://yookeun.github.io/java/2015/02/01/spring-tdd/)  
 
 
 
@@ -25,5 +26,4 @@
 
 검색 키워드: mockmvc mockito  
 [MockMVC, JUnit, Mockito](https://memorynotfound.com/unit-test-spring-mvc-rest-service-junit-mockito/)  
-
 
