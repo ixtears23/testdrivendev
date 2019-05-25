@@ -28,3 +28,12 @@
 
 검색 키워드: mockmvc mockito  
 [MockMVC, JUnit, Mockito](https://memorynotfound.com/unit-test-spring-mvc-rest-service-junit-mockito/)  
+
+
+## 20190525
+
+[Srping mvc test sample](https://github.com/spring-projects/spring-mvc-showcase)  
+
+[spring mvc test reference](http://rstoyanchev.github.io/spring-32-test-webapps/#27)  
+
+
