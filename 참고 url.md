@@ -48,3 +48,8 @@
 [mocha jsdom jquery dom](http://pauleveritt.github.io/posts/pylyglot/jsdom/)  
 
 [javascript jquery tdd](https://www.quora.com/What-is-a-good-way-to-practice-TDD-when-writing-JavaScript-specifically-jQuery)
+
+
+## 20190612
+
+[DBUnit 예제](https://examples.javacodegeeks.com/core-java/junit/junit-dbunit-example/)  
