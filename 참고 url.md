@@ -55,3 +55,6 @@
 [DBUnit 예제](https://examples.javacodegeeks.com/core-java/junit/junit-dbunit-example/)  
 
 [Mocks Aren't Stubs - Martin Fowler](https://martinfowler.com/articles/mocksArentStubs.html#UsingEasymock)  
+
+## 20190614
+[Spring 단위 테스트](https://reflectoring.io/spring-boot-test/)  
