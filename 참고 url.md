@@ -65,3 +65,5 @@
 ## 20190703
 [단위 테스트와 통합테스트에 대한 좋은 설명](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters)  
 
+# 20190705
+[테스트더블](https://testing.googleblog.com/2013/07/testing-on-toilet-know-your-test-doubles.html?m=1)  
