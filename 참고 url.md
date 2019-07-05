@@ -67,3 +67,4 @@
 
 # 20190705
 [테스트더블](https://testing.googleblog.com/2013/07/testing-on-toilet-know-your-test-doubles.html?m=1)  
+[Given When Then](https://martinfowler.com/bliki/GivenWhenThen.html#footnote-example-credit)  
