@@ -73,3 +73,8 @@
 # 20190707
 [assertJ java doc](http://joel-costigliola.github.io/assertj/core-8/api/org/assertj/core/api/AbstractAssert.html)  
 [mockito java doc](https://static.javadoc.io/org.mockito/mockito-core/2.28.2/org/mockito/Mockito.html)  
+
+
+# 20190708
+[왜 필드주입이 좋지 않나](https://www.petrikainulainen.net/software-development/design/why-i-changed-my-mind-about-field-injection/)  
+[필드주입보다 생성자 주입](https://lkrnac.net/blog/2014/02/promoting-constructor-field-injection/)  
