@@ -68,3 +68,8 @@
 # 20190705
 [테스트더블](https://testing.googleblog.com/2013/07/testing-on-toilet-know-your-test-doubles.html?m=1)  
 [Given When Then](https://martinfowler.com/bliki/GivenWhenThen.html#footnote-example-credit)  
+
+
+# 20190707
+[assertJ java doc](http://joel-costigliola.github.io/assertj/core-8/api/org/assertj/core/api/AbstractAssert.html)  
+[mockito java doc](https://static.javadoc.io/org.mockito/mockito-core/2.28.2/org/mockito/Mockito.html)  
