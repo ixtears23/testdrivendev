@@ -46,9 +46,134 @@ TDD라고 특별한 테크닉이나 테스트 프레임워크를 쓰는것을 �
  3) 테스트 시간이 오래 걸리는 경우
       ex) 네트워크 이슈로 인한 지연, 서버의 성능문제 등 환경으로 인해 지연되는 경우
 
-Mock객체의 종류
+### Mock객체의 종류
+
 |Test Double|
-|---|---|---|---|---|---|
-|Ddmmy Object|Test Stub|Test Spy|Mock Object|Fake Object|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ddmmy Object|Test Stub|Test Spy|Mock Object|Fake Object|  
 
+1) Test Double : 오리지널 객체를 사용해서 테스트 진행이 어려운 경우 대신하여 테스트를 진행하도록 만들어주는 객체
 
+2) Dummy Object : 단순한 빈껍데기 객체를 위미, 인스턴스화가 가능한 수준으로만 구현한 객체
+   ex) 해당 테스트가 미구현된 인터페이스에 의존적인 경우 사용됨
+
+~~~java
+public interface User {
+  public void login(String userid);
+  public void logout(String userid);
+}
+~~~
+
+~~~java
+public class eShop {
+  @Test
+  public void testAddCoupon() {
+    // 구현부는 없지만 인터페이스를 인스턴스화하기 위해 생성
+    User user = new User() {
+      @Override
+      public void login(String userId) {
+        // TODO Auto-generated method stub    
+      }
+      
+      @Override
+      public void logout(String userId) {
+        // TODO Auto-generated method stub
+      }
+    }
+  }
+}
+~~~
+
+3) Test Stub : 더미 객체가 실제 동작하는 것처럼 만들어 놓은 객체, 특정 값을 리턴하도록 한다.
+   ex) 해당 테스트가 특정 값을 리턴받는 경우를 테스트할때
+   
+~~~java
+  public class eshop {
+    @Test
+    public void testAddCoupon() {
+      User user = new User() {
+        // 테스트진행을 위해 값을 리턴하게 만든 임시 객체(Test Stub)
+        @Override
+        public boolean login(String userId) {
+          return true;
+        }
+        
+        @Override
+        public boolean logout(String userId) {
+          return false;
+        }
+      }
+    }
+  }
+~~~
+
+4) Fake Object : 하나의 인스턴스를 대표하는것이 스텁이면, 여러개의 인스턴스를 대표하는 것이 Fake Object이다
+   ex) 내부에 리스트, 맵을 이용하여 DB같은 외부 의존 환경을 대체할때 사용
+   
+~~~java
+public class eshop {
+
+  @Before
+  public void selectUserTest() {
+    // DB를 대체하기 위해 만든 Fake Object
+    List<User> userList = new ArrayList<User>();
+  }
+  
+  @Test
+  public void userTest() {
+    User user = new User() {
+      // 테스트진행을 위해 값을 리턴하게 만든 임시 객체(Test Stub)
+      @Override
+      public boolean login(String userId) {
+         return true;
+      }
+      
+      @Override
+      public boolean logout(String userId) {
+        return false;
+      }
+    }
+  }
+}
+~~~
+
+5)　Test Spy : 특정 기능을 수행하거나 정보를 기록하는 객체
+   ex) 로그인 여부를 확인하기 위해 임시 기능을 추가함  
+   
+~~~java
+  public class spyUser implements User {
+    //호출여부를 확인하기 위한 필드 추가
+    private int count;
+    
+    @Override
+    public boolean login(String userId) {
+      count++;
+      return true;
+    }
+    
+    @Override
+    public boolean logout(String userId) {
+      return false;
+    }
+    
+    // 테스트를 위해 스펙에 없는 기능을 추가
+    public int loginCount() {
+      reuturn count;
+    }
+  }
+ 
+~~~
+
+~~~java
+
+  @Test
+  public void userLogOutTest() {
+    int loginCnt = ((spyUser) user).loginCount();
+    boolean loginValid = false;
+    if(loginCnt > 0) {
+      loginValid = true;
+    }
+    assertTrue(loginValid);
+  }
+
+~~~
